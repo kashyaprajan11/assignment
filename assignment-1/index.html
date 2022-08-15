@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment #1</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <form onsubmit="submit()">
+        <div class="top-section">
+          <p>Select your source:</p>
+          <p>Google Cloud Storage</p>
+        </div>
+        <div class="input-section">
+          <label for="pipeline">Provide a name for pipeline:</label>
+          <input
+            class="input-field"
+            type="text"
+            id="pipeline"
+            placeholder="e.g., cust_shop_energy_gkateway001"
+          />
+
+          <label for="project-name">GCS project name:</label>
+          <input
+            class="input-field"
+            type="text"
+            id="project-name"
+            placeholder="project-id"
+          />
+
+          <label for="bucket-name">GCS bucket name:</label>
+          <input
+            class="input-field"
+            type="text"
+            id="bucket-name"
+            placeholder="gs://your-bucket"
+          />
+
+          <label for="cloud-file-name">Input Cloud Storage File(s):</label>
+          <div class="input-with-example">
+            <input
+              class="input-field"
+              type="text"
+              id="cloud-file-name"
+              placeholder="GCS location of your files"
+              style="width: 100%"
+            />
+            <p style="font-size: 0.8rem; color: #777">Example:</p>
+            <p style="font-size: 0.8rem; color: #777">
+              gs://your-bucket/your-files/01.csv
+            </p>
+          </div>
+
+          <label for="credentials">GCS credentials:</label>
+          <input
+            class="input-field"
+            type="text"
+            id="credentials"
+            style="background-color: #ccc"
+          />
+
+          <label for="run-every">Run Every:</label>
+          <input
+            class="input-field"
+            type="text"
+            id="run-every"
+            placeholder="(in minutes)"
+          />
+        </div>
+        <div class="form-buttons">
+          <button class="create">Create</button>
+          <button class="cancel">Cancel</button>
+        </div>
+      </form>
+      <small id="message"></small>
+    </div>
+  </body>
+</html>
